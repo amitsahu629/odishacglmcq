@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>OSSSC RI, ARI & AMIN ~ 2015</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="header-logo">
+    <img src="images/favicon.png" alt="Odisha Govt Logo">
+  </div>
+  <header class="quiz-header">
+    <h1>OSSC Combined Graduate Level Examination - 2021 </h1>
+    <div>Exam Time: 09:00-12:00</div><br>
+    <div><h3>Exam Date:   11-Oct-2022   </h3></div>
+    <div class="controls">
+      <div class="timer-bar">
+        <div class="timer-progress"></div>
+      </div>
+      <!-- <span class="timer">Time: 180:00</span> -->
+      <button id="dark-mode-toggle">🌙</button>
+      <button id="exit-btn">Exit</button>
+    </div>
+  </header>
+
+  <div class="section-filter" id="section-filter">
+    <div class="filter-buttons">
+    <button data-section="All" class="active">All</button>
+    <button data-section="Math">Math</button>
+    <button data-section="Reasoning">Reasoning</button>
+    <button data-section="Odia">Odia</button>
+    <button data-section="English">English</button>
+    <button data-section="GK">GK</button>
+    <button data-section="Computer">Computer</button>
+    </div>
+  <div class="filter-timer">
+    <span class="timer">Time: 180:00</span>
+  </div>
+  </div>
+
+  <main class="quiz-container">
+    <section class="question-area">
+      <div class="question-count"></div>
+      <div id="question" class="question"></div>
+      <div id="options" class="options"></div>
+
+      <div class="navigation-buttons">
+        <button id="prev-btn">Previous</button>
+        <button id="next-btn">Next</button>
+        <button id="review-btn">Mark for Review</button>
+        <button id="submit-btn">Submit</button>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <h2>Progress</h2>
+      <div class="stats">
+        <div>Total: <span id="total-questions">0</span></div>
+        <div>Answered: <span id="answered-questions">0</span></div>
+        <div>Remaining: <span id="remaining-questions">0</span></div>
+      </div>
+      <div id="progress-grid" class="progress-grid"></div>
+    </aside>
+  </main>
+
+  <div id="result" class="result"></div>
+  <button class="back-to-top">↑ Back to Top</button>
+
+  <footer class="footer">
+    <div class="footer-sections">
+      <div class="about-me">
+        <img src="images/akslogo.png" alt="Footer Logo" class="footer-logo" />
+        <div class="footer-text">
+          <h3>About</h3>
+          <p>This quiz app is created by AKS to help aspirants prepare for Odisha Competitive exams with free, effective practice tools.</p>
+        </div>
+      </div>
+      <div class="feedback-form">
+        <h4>Feedback</h4>
+        <form action="https://formspree.io/f/myzwklww" method="POST">
+          <textarea name="message" rows="3" placeholder="Your message..." required></textarea>
+          <input type="email" name="email" placeholder="Email (optional)" />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    
+    <p class="footer-bottom">© 2025 Odisha Quiz App. All rights reserved.</p>
+  </footer>
+
+  <script src="quiz-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
